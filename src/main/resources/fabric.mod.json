@@ -1,33 +1,32 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "greatbowmod",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Great Bow Mod",
+	"description": "Adds a powerful great bow and matching arrow.",
 	"authors": [
-		"Me!"
+		"Technicalslayer"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"license": "MIT",
+	"icon": "assets/tutorial-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"net.technicalgames.greatbowmod.GreatBowMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"net.technicalgames.greatbowmod.GreatBowModClient"
+		],
+		"fabric-datagen": [
+			"net.technicalgames.greatbowmod.GreatBowModDataGenerator"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"greatbowmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
